@@ -9,6 +9,7 @@ const Postlist = () => {
 
     const fetchPosts = async () => {
         const res = await axios.get("http://localhost:4000/posts");
+        console.log("Data from API: ", res.data.posts);
         setPosts(res.data.posts);
     }
 
